@@ -1,12 +1,8 @@
 import {checkForURL} from './URLChecker'
 
-
-
-
 function handleSubmit(event) {
     event.preventDefault()
-    
-
+   
     // check what text was put into the form field
     const url=document.getElementById('url').value;
     Client.checkForURL(url)

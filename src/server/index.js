@@ -37,8 +37,30 @@ textapi.sentiment({
     'url': req.body.text
   }, function(error, response) {
       res.send(response)
-      console.log(response)
-  }); 
+      console.log("Hi Khushal"+response)
+  });
 
 }
 
+/* textapi.sentiment({
+    'text': 'John is a very good football player!'
+}, function(error, response) {
+    if (error === null) {
+        console.log(response);
+    }
+});
+}
+
+var callback = function(error, data, response) {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log("API called successfully. Returned data: ");
+      console.log("========================================");
+      for (var i = 0; i < data.stories.length; i++) {
+        console.log(data.stories[i].title + " / " + data.stories[i].source.name);
+      }
+    }
+  };
+  
+  api.listStories(opts, callback); */
