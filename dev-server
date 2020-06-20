@@ -1,0 +1,4 @@
+
+> example-project@1.0.0 build-dev F:\evaluate-news-nlp
+> webpack-dev-server  --config webpack.dev.js --open "-" "on" "8080"
+
