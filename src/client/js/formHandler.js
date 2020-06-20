@@ -1,3 +1,8 @@
+import {checkForURL} from './URLChecker'
+
+
+
+
 function handleSubmit(event) {
     event.preventDefault()
     
@@ -5,9 +10,10 @@ function handleSubmit(event) {
     // check what text was put into the form field
     const url=document.getElementById('url').value;
     Client.checkForURL(url)
+    console.log(url);
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test',{
+    fetch('http://localhost:8080/add',{
         method:'POST',
         mode:'cors',
         headers:{

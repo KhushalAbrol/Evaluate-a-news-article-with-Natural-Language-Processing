@@ -28,3 +28,17 @@ app.get('/test', function (req, res) {
 
 
 console.log(`Your API key is ${process.env.API_KEY}`);
+
+app.post('/add', sendData)
+
+
+function sendData(req, res){
+textapi.sentiment({
+    'url': req.body.text
+  }, function(error, response) {
+      res.send(response)
+      console.log(response)
+  }); 
+
+}
+

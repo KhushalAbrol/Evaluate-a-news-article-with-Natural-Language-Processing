@@ -14,7 +14,7 @@ export {
     handleSubmit
    }
 
-console.log(checkForName);
+console.log(checkForURL);
 
 alert("I EXIST")
 console.log("CHANGE!!");
