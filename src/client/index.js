@@ -1,4 +1,4 @@
-import { checkForURL } from './js/nameChecker'
+import { checkForURL } from './js/URLChecker'
 import { handleSubmit } from './js/formHandler'
 
 
