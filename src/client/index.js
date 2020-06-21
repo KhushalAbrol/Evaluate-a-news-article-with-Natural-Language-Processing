@@ -14,4 +14,4 @@ export {
     handleSubmit
    }
 
-console.log(checkForURL);
+
