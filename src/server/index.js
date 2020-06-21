@@ -9,9 +9,11 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 var cors = require('cors');
-app.use(cors())
+app.use(cors());
 
-console.log(__dirname)
+
+
+console.log("__dirname"+__dirname)
 var aylien = require("aylien_textapi");
 var textapi = new aylien({
     application_id: process.env.APP_ID,
