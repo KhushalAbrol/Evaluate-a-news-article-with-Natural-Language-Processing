@@ -1,5 +1,6 @@
 function checkForURL(url) {
-    var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/; 
+    var expression = /^(ftp|https?):\/\/+(www\.)?[a-z0-9\-\.]{3,}\.[a-z]{3}$/; 
+     
     var regex = new RegExp(expression); 
     console.log("::: Running checkForURL :::", url);
 
