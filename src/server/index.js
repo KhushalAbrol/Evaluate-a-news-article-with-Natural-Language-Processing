@@ -5,6 +5,11 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const app = express()
 app.use(express.static('dist'))
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+
 console.log(__dirname)
 var aylien = require("aylien_textapi");
 var textapi = new aylien({
@@ -34,7 +39,7 @@ app.post('/add', sendData)
 
 function sendData(req, res){
 textapi.sentiment({
-    'url': req.body.text
+    'url': req.body.url
   }, function(error, response) {
       res.send(response)
       console.log("Hi Khushal"+response)
