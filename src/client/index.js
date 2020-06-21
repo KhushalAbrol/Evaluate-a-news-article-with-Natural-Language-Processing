@@ -15,8 +15,3 @@ export {
    }
 
 console.log(checkForURL);
-
-alert("I EXIST")
-console.log("CHANGE!!");
-console.log("CHANGE!!");
-console.log("CHANGE!!");

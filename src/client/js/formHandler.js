@@ -9,13 +9,13 @@ function handleSubmit(event) {
     console.log(url);
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/add',{
+    fetch('http://localhost:3000/add',{
         method:'POST',
         mode:'cors',
         headers:{
             'Content-Type': 'application/json'
         },
-        body:JSON.stringify({url})   
+        body:JSON.stringify({URL:url})   
     })
     .then(res => res.json())
     .then(function(res) {

@@ -8,7 +8,8 @@ app.use(express.static('dist'))
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
+var cors = require('cors');
+app.use(cors())
 
 console.log(__dirname)
 var aylien = require("aylien_textapi");
@@ -34,17 +35,17 @@ app.get('/test', function (req, res) {
 
 console.log(`Your API key is ${process.env.API_KEY}`);
 
-app.post('/add', sendData)
+app.post('/add',sendData)
 
 
 function sendData(req, res){
-textapi.sentiment({
-    'url': req.body.url
+  console.log(req.body.URL);
+  textapi.sentiment({
+    'url': req.body.URL    
   }, function(error, response) {
       res.send(response)
-      console.log("Hi Khushal"+response)
+      console.log("Hi Khushal "+response)
   });
-
 }
 
 /* textapi.sentiment({
