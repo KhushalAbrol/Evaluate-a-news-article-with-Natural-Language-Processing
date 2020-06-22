@@ -15,7 +15,7 @@ function handleSubmit(event) {
             },
             body:JSON.stringify({URL:url})   
         })
-        .then(res => res.json())
+        .then(res => res)
         .then(function(res) {
             document.getElementById('results').innerHTML = res.polarity
         })
