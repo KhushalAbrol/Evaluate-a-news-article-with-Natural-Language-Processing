@@ -38,10 +38,8 @@ app.get('/test', function (req, res) {
 console.log(`Your API key is ${process.env.API_KEY}`);
 
 app.post('/add',sendData)
-
-
 function sendData(req, res){
-  console.log(req.body.URL);
+  console.log("Here is the URL:"+req.body.URL);
   textapi.sentiment({
     'url': req.body.URL    
   }, function(error, response) {
@@ -49,26 +47,3 @@ function sendData(req, res){
       console.log("Hi Khushal "+response)
   });
 }
-
-/* textapi.sentiment({
-    'text': 'John is a very good football player!'
-}, function(error, response) {
-    if (error === null) {
-        console.log(response);
-    }
-});
-}
-
-var callback = function(error, data, response) {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log("API called successfully. Returned data: ");
-      console.log("========================================");
-      for (var i = 0; i < data.stories.length; i++) {
-        console.log(data.stories[i].title + " / " + data.stories[i].source.name);
-      }
-    }
-  };
-  
-  api.listStories(opts, callback); */
