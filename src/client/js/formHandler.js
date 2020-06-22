@@ -7,7 +7,7 @@ function handleSubmit(event) {
     console.log(url);
     if(Client.checkForURL(url)){
         console.log("::: Form Submitted :::")
-        fetch('/add',{
+        fetch('http://localhost:8080/add',{
             method:'POST',
             mode:'cors',
             headers:{
