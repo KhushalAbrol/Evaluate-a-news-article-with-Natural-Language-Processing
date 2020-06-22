@@ -41,9 +41,9 @@ app.post('/add',sendData)
 function sendData(req, res){
   console.log("Here is the URL:"+req.body.URL);
   textapi.sentiment({
-    'url': req.body.URL    
+    'url' : req.body.URL      
   }, function(error, response) {
       res.send(response)
-      console.log("Hi Khushal "+response)
+      console.log(response)
   });
 }
