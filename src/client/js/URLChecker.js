@@ -7,7 +7,7 @@ function checkForURL(url) {
     //compare regex and url
     if(regex.test(url)){
         //if valid retuen true
-        console.log("1,2,3 Valid")
+        console.log("Valid")
         return true;
     }
     else{
