@@ -40,7 +40,7 @@ app.get('/test', function (req, res) {
 //takes url from cilent/formHandler send the required data back
 app.post('/add',sendData)
 function sendData(req, res){
-  console.log("Here is the URL:"+req.body.URL);
+  //console.log("Here is the URL:"+req.body.URL);
   textapi.sentiment({
     'url' : req.body.URL      
   }, function(error, response) {
@@ -53,3 +53,5 @@ function sendData(req, res){
         }
   });
 }
+
+module.exports = {sendData}
