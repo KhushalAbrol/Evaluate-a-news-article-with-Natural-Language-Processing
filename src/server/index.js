@@ -13,11 +13,12 @@ app.use(cors());
 
 
 
-console.log("__dirname"+__dirname)
+console.log(__dirname)
 var aylien = require("aylien_textapi");
+//store env variable in .env
 var textapi = new aylien({
-    application_id: process.env.APP_ID,
-    application_key: process.env.APP_KEY
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
 });
 
 app.get('/', function (req, res) {
@@ -35,8 +36,8 @@ app.get('/test', function (req, res) {
 })
 
 
-console.log(`Your API key is ${process.env.API_KEY}`);
-
+//console.log(`Your API key is ${process.env.API_KEY}`);
+//takes url from cilent/formHandler send the required data back
 app.post('/add',sendData)
 function sendData(req, res){
   console.log("Here is the URL:"+req.body.URL);

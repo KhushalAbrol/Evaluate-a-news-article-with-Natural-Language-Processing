@@ -1,11 +1,11 @@
-/* import {checkForURL} from './URLChecker' */
 function handleSubmit(event) {
     event.preventDefault()  
-    /*if(Client.checkForURL(JSON.parse(JSON.stringify(url)))){ */
-    // check what text was put into the form field
+    //Putting Entered url into a variable
     const url=document.getElementById('url').value;
-    console.log(url);
+   // console.log(url);
+   //checking if url is valid or not
     if(Client.checkForURL(url)){
+        //if valid post url to server
         console.log("::: Form Submitted :::")
         fetch('http://localhost:8080/add',{
             method:'POST',
@@ -15,10 +15,12 @@ function handleSubmit(event) {
             },
             body:JSON.stringify({URL:url})   
         })
-        .then(res => res.json())
+        //then take response and display to screen
+        .then(res => res)
         .then(function(res) {
-            document.getElementById('results').innerHTML = res.polarity
+            document.getElementById('polarity').innerHTML = res.polarity
+            document.getElementById('subjectivity').innerHTML = res.subjectivity
+            document.getElementById('text').innerHTML = res.text
         })
-}
-}
+}}
 export { handleSubmit }
