@@ -44,7 +44,12 @@ function sendData(req, res){
   textapi.sentiment({
     'url' : req.body.URL      
   }, function(error, response) {
-      res.send(response)
-      console.log(response)
+        if(error){
+            console.log(error)
+        }
+        else{
+            res.send(response)
+            console.log(response)
+        }
   });
 }

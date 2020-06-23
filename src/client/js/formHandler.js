@@ -16,7 +16,7 @@ function handleSubmit(event) {
             body:JSON.stringify({URL:url})   
         })
         //then take response and display to screen
-        .then(res => res)
+        .then(res => res.json())
         .then(function(res) {
             document.getElementById('polarity').innerHTML = res.polarity
             document.getElementById('subjectivity').innerHTML = res.subjectivity
