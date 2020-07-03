@@ -1,8 +1,7 @@
 # Project Instructions
 
-This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
-
-The goal of this project is to give you practice with:
+This is a single page web app.
+The goal of this project:
 - Setting up Webpack
 - Sass styles
 - Webpack Loaders and Plugins
@@ -16,13 +15,7 @@ On top of that, I want to introduce you to the topic of Natural Language Process
 concerned with the interactions between computers and human (natural) languages, in particular how to program computers to
 process and analyze large amounts of natural language data.
 
-You could spend years and get a masters degree focusing on the details of creating NLP systems and algorithms. Typically, NLP programs require far more resources than individuals have access to, but a fairly new API called Aylien has put a public facing API in front of their NLP system. We will use it in this project to determine various attributes of an article or blog post.
-
 ## Getting started
-
-It would probably be good to first get your basic project setup and functioning. Follow the steps from the course up to Lesson 4 but don't add Service Workers just yet. We won't need the service workers during development and having extra caches floating around just means there's more potential for confusion. So, fork this repo and begin your project setup.
-
-Remember that once you clone, you will still need to install everything:
 
 `cd` into your new folder and run:
 - `npm install`
@@ -57,7 +50,6 @@ var textapi = new aylien({
 });
 ```
 
-...but there's a problem with this. We are about to put our personal API keys into a file, but when we push, this file is going to be available PUBLICLY on Github. Private keys, visible publicly are never a good thing. So, we have to figure out a way to make that not happen. The way we will do that is with environment variables. Environment variables are pretty much like normal variables in that they have a name and hold a value, but these variables only belong to your system and won't be visible when you push to a different environment like Github.
 
 - [ ] Use npm or yarn to install the dotenv package ```npm install dotenv```. This will allow us to use environment variables we set in a new file
 - [ ] Create a new ```.env``` file in the root of your project
@@ -103,6 +95,3 @@ Once you are hooked up to the Aylien API, you are most of the way there! Along w
 - Go back to the web pack config and add the setup for service workers.  
 - Test that the site is now available even when you stop your local server 
 
-## Deploying
-
-A great step to take with your finished project would be to deploy it! Unfortunately its a bit out of scope for me to explain too much about how to do that here, but checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
